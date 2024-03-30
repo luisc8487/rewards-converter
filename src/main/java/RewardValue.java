@@ -1,11 +1,10 @@
-
 public class RewardValue {
     private double cashValue;
     private double milesValue;
 
     public RewardValue(double cashValue) {
         this.cashValue = cashValue;
-        this.milesValue = cashValue * 0.0035;
+        this.milesValue = cashValue / 0.0035;
     }
 
     public double getCashValue() {
@@ -13,6 +12,6 @@ public class RewardValue {
     }
 
     public double getMilesValue() {
-        return this.milesValue;
+        return (int) (this.milesValue);
     }
 }
